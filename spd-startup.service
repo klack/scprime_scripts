@@ -1,0 +1,15 @@
+[Unit]
+Description=spd startup
+Wants=network.target
+After=syslog.target network-online.target
+
+[Service]
+User=(your user name)
+Type=Simple
+ExecStart=/bin/bash -c /usr/local/sbin/spd-startup.sh
+KillMode=process
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target
