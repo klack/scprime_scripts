@@ -4,9 +4,9 @@ Wants=network.target
 After=syslog.target network-online.target
 
 [Service]
-User=(your user name)
+User=klack
 Type=Simple
-ExecStart=/bin/bash -c /usr/local/sbin/spd-startup.sh
+ExecStart=/bin/bash -c /opt/scprime_scripts/spd-startup.sh
 KillMode=process
 Restart=on-failure
 RestartSec=30
